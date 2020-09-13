@@ -1,0 +1,18 @@
+/*
+Q : Write an algorithm to determine whether a given number is prime or not. Also draw the
+corresponding flow chart.
+*/
+
+Pseudo code :
+
+1. Get Number .
+2. Set N = Number .
+3. Initialise i = 2 .
+4. Initialise s to floor of square root of N , ie. s = floor(sqrt(N)) .
+5. Initialise CHECK = "TRUE" .
+5. WHILE i <= s AND CHECK = "TRUE" :
+    5.a. if N is divisible by i :
+        5.a.a. Set CHECK = "FALSE".
+    5.b. Increment i by 1 , ie. i = i + 1 .    
+6. If CHECK = "TRUE" , Print ("The number is Prime") . Else Print("The number is not Prime") .
+    

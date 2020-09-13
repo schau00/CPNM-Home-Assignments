@@ -1,0 +1,14 @@
+/*
+Q : Write an algorithm to determine maximum of three numbers. Also draw the
+corresponding flow chart.
+*/
+
+Pseudo Code :
+
+1. Get number1 .
+2. Set MAX = number1 .
+3. Get number2 .
+4. If MAX > number2 , Set MAX = number2 .
+5. Get number3 .
+6. If MAX > number3 , Set MAX = number3 .
+7. Return MAX .

@@ -1,0 +1,19 @@
+/*
+Q : Write an algorithm to generate first 100 prime numbers. Also draw the corresponding
+flow chart.
+*/
+
+Pseudo code : 
+
+1. Initialise i = 0 . 
+2. Initialise N = 2 .
+3. While i < 100 :
+    3.a. Initialise j = 2 .
+    3.b. Initialise s to floor of the square root of N , ie s = floor(sqrt(N)) .
+    3.c. Initialise CHECK = "True" .
+    3.d. While CHECK = "True" AND j <= s :
+        3.d.a. If N is divisible by j , change CHECK = "False" .
+        3.d.b. Increment j by 1 , j = j + 1 .
+    3.e. If CHECK = "True" , Print N and Increment i by 1 .
+    3.f. Increment N by 1 , N = N + 1 .
+        

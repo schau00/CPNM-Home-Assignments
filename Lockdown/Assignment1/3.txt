@@ -1,0 +1,15 @@
+/*
+Q : Write an algorithm to print the reverse of a number read as input. Also draw the
+corresponding flow chart.
+*/
+
+Pseudo code :
+
+1. Get number .
+2. Set N = number .
+3. Initialise R = 0 .
+4. While N != 0 :
+    4a. Change R to R * 10 , ie. R = 10 * R .
+    4a. Increment R by (N % 10) , ie. R = R + (N % 10) .  
+    4c. Change N to N / 10 , ie. N = (N / 10) . 
+5. Print R .    

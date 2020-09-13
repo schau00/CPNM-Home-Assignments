@@ -1,0 +1,14 @@
+/*
+Q : Write an algorithm to determine the sum of individual digits of a given integer. Also
+draw the corresponding flow chart
+*/
+
+Pseudo code :
+
+1. Get number .
+2. Set N = number .
+3. Initialise SUM = 0 .
+4. While N != 0 :
+    4a. Increment SUM by (N % 10) , ie. SUM = SUM + (N % 10) .
+    4b. Change N to N / 10 , ie. N = (N / 10) .
+5. Return SUM .     
