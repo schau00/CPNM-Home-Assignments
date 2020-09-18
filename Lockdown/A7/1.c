@@ -90,8 +90,12 @@ void bisectionRecursion(float* x1, float* x2, float* e,int* it, int currentItera
 
     float x = (*x1 + *x2)/2.00;
     float currentError = abs((*x1 - *x2)/x);
-    if(currentError == *e || currentIteration >= *it){
+    if(currentError == *e){
         printf("Root : %f", x);
+        return;
+    }
+    if(currentIteration >= *it){
+        printf("Root could not be found within %d iterations.", *it);
         return;
     }
 
@@ -135,8 +139,12 @@ void regFalsiRecursion(float* x1, float* x2, float* e,int* it, int currentIterat
 
     float x = (*x1) + ((f1) * ((*x1 - *x2)/(f2 - f1)));
     float currentError = abs((*x1 - *x2)/(float)x);
-    if(currentError < *e || currentIteration >= *it){
+    if(currentError < *e){
         printf("Root : %f", x);
+        return;
+    }
+    if(currentIteration >= *it){
+        printf("Root could not be found within %d iterations.", *it);
         return;
     }
 
@@ -178,11 +186,15 @@ void newRapRecursion(float* x, float* e, float* s, int* it, int currentIteration
 
     float x1 = *x - (f/f1);
     float currentError = (x1 - *x)/(*x);
-    if(currentError < *e || currentIteration >= *it){
+    if(currentError < *e){
         printf("Root : %f", x1);
         return;
     }
-
+    if(currentIteration >= *it){
+        printf("Root could not be found within %d iterations.", *it);
+        return;
+    }
+    
     *x = x1;
     return newRapRecursion(x, e, s, it, currentIteration + 1);
 }
