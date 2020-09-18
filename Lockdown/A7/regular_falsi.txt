@@ -1,0 +1,15 @@
+1. Start
+2. Read x1 , x2, e
+x1, x2 -> Initial guesses
+e -> absolute error , ie. desired level of accuracy
+3. Compute f1 = f(x1) and f2 = f(x2)
+4. If(f1 * f2) > Initial Guesses are wrong. Goto(11)
+   Else continue :
+5. x = x1 + (f1*(f2 - f1)/(x1 - x2))
+6. If (|x1 - x2|/x < e) then display x . Goto(11)
+    Else :
+7. f = f(x)
+8. If((f * f1) > 0) , then x1 = x and f1 = f1
+9. Else , x2 = x and f2 = f .
+10. Goto(5). Continue loop .
+11. Stop. 

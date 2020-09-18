@@ -1,0 +1,14 @@
+
+1. Read x, e, n, d.
+    x -> initial guess
+    e -> Absolute error desired
+    n -> Number of iterations desired
+    d -> Desired slope
+2. for n iterations : 
+3. f = f(x)
+4. f`= d(f(x))/dx
+5. if (|f`| < d) : Display too small slope , wrong guess. Goto (9)
+6. x1 = x - (f/f`)
+7. if ((x1-x)/x  < e) : Display x1 as root . Goto(9)
+8. x = x1 , continue loop , goto(3)
+9. End.    
