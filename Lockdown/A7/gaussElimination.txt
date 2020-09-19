@@ -1,0 +1,3 @@
+Target : Create an upper triangular matrix
+1. Start
+2. Take A[i][i] as constant and convert all elements of that row from i+1 to n as 0

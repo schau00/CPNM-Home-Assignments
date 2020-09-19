@@ -1,0 +1,10 @@
+1. Start 
+2. for i : 1 to n 
+            for k : 1 to i-1 & i+1 to n
+                multiply all elements of i th row with A[k][i] 
+                multiply all elements of k th row with A[i][i]
+                Ak = Ai - Ak (Ak is all elements of kth row)
+                this makes A[k][i] = 0 
+        
+
+3. Only diagonal elements are left        
