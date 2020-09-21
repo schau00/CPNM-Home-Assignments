@@ -228,7 +228,7 @@ void Jacobi(float A[N][N], int *x){
         check = 1;
         
         for(i = 0; i < n; i++){
-            if(abs((tempvar[i] - var[i]/ tempvar[i])) > E){
+            if(fabs((tempvar[i] - var[i]/ tempvar[i])) > E){
                 check = 0;
             }
         }
