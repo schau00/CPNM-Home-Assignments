@@ -34,7 +34,8 @@ void main(){
         fclose(rf);
         fclose(wf);
     }
-    
+    free(num);
+    return;
 }
 
 void bubbleSort(int *num, int lastIndex){

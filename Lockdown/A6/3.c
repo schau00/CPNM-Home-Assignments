@@ -1,6 +1,5 @@
 /*
-Hello World
-How are you ?
+Q : Write a program in C whose output is the program itself.
 */
 #include <stdio.h>
 int main(){

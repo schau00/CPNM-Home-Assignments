@@ -1,3 +1,6 @@
+/*
+Q : 1.Create a structure to specify data on students given below:Roll number, Name, Department, Course, Year of joiningAssume that there are not more than 100 students in the  college. a.Write a function to print the names of all students who joined  in a particular year.b.Write a function to print the data of a student whose roll number is given.
+*/
 
 #include <stdio.h>
 typedef enum{

@@ -1,3 +1,7 @@
+/*
+Q : Write a program which accepts names, rolls and marks of 10 students in 6 subjects stores it in an array  of  structures. Write  a  separate  function  which  prints  in  ascending  order  the  rank  list  (roll, name, average) based on the average of 6 subjects.
+*/
+
 #include<stdio.h>
 struct StudentData
 {

@@ -1,3 +1,7 @@
+/*
+Q : Write a program in C to create and store information in a text file.
+*/
+
 #include <stdio.h>
 # define MaxSize 100000
 int main(){
