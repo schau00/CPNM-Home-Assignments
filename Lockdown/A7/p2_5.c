@@ -7,29 +7,39 @@ Suppose f(x) = exp(x) .
 
 # include <stdio.h>
 # include <math.h>
+# include <stdlib.h>
+# include <string.h>
+
 float trapezoidalRule(float *, float *, int);
 float simpsonRule(float *, float *, int);
 float function(float );
-
-void main(){
+float integrate(float(*fxn)(float *, float *b, int n), float *, float *, int n);
+void main(int argc,char*  argv[argc +1]){
     float a, b;
-    printf("Enter the left limit : ");
-    scanf("%f", &a);
-    printf("Enter the right limit : ");
-    scanf("%f", &b);
     int n;
-    printf("Enter the number of equal intervals to divide the range : ");
-    scanf("%d", &n);
+    char *s;
+    s = argv[1];
+    a = strtod(argv[2], 0);
+    b = strtod(argv[3], 0);
+    n = strtod(argv[4], 0);
+    
     float areaEnclosed = 0.0;
-    printf("Area enclosed by function f(x) = exp(x) , \n");
-    areaEnclosed = trapezoidalRule(&a, &b, n);
-    printf("Applying Trapezoidal Rule : %f\n", areaEnclosed);
-    areaEnclosed = simpsonRule(&a, &b, n);
-    printf("Applying Simpson 1/3 rd Rule : %f\n", areaEnclosed);
-    return;
+    if(strcmp(s, "simpsons") == 0){
+        areaEnclosed = integrate(simpsonRule, &a, &b, n);
+    }
+    else if(strcmp(s, "trapezoidal") == 0){
+        areaEnclosed = integrate(trapezoidalRule, &a, &b, n);
+    }
+    else{
+        printf("Entered name does not match with function name.\n");
+        return;
+    }
+    printf("Area enclosed by f(x) = exp(x) within range %f to %f is : %f\n", a, b, areaEnclosed);
 
 }
-
+float integrate(float (*fxn)(float* x, float* y, int z), float *a, float *b, int n){
+    return fxn(a, b, n);
+}
 float function(float x){
     return (exp(x));
 }
